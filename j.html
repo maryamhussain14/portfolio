@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Hussain - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 2rem;
+            font-size: 1.5rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .toggle-container {
+            margin: 10px;
+            text-align: right;
+            padding: 10px;
+        }
+        .toggle-button {
+            cursor: pointer;
+            background: #6e8efb;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .toggle-button:hover {
+            background: #a777e3;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 1s ease-out forwards;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <header>
+        <h1>Maryam Hussain</h1>
+        <p>Web Developer</p>
+    </header>
+    
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am an inter passed student learning web development from Aptech. I am currently pursuing ACCP (Aptech Certified Computational Professionalism) and building my skills in front-end and back-end development.</p>
+    </section>
+    
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML - 90%</li>
+            <li>CSS - 85%</li>
+            <li>JavaScript - 75%</li>
+            <li>Bootstrap - 80%</li>
+            <li>jQuery - 70%</li>
+            <li>SEO - 65%</li>
+            <li>MS Automation - 60%</li>
+        </ul>
+    </section>
+    
+    <section class="projects">
+        <h2>Projects</h2>
+        <div>
+            <h3>Jewelry Website</h3>
+            <p>A beautifully designed jewelry e-commerce website.</p>
+            <a href="http://melodious-cranachan-540ef7.netlify.app/" target="_blank">View Project</a>
+        </div>
+    </section>
+    
+    <section class="certifications">
+        <h2>Certifications</h2>
+        <p>ACCP (Aptech Certified Computational Professionalism)</p>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hussainmaryam262@gmail.com">hussainmaryam262@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/maryamhussain14" target="_blank">maryamhussain14</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/maryam-hussain" target="_blank">Maryam Hussain</a></p>
+    </section>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
